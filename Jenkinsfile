@@ -7,30 +7,30 @@ pipeline {
   stages {
     stage('compiling') {
       steps {
-        sh 'mvn compile'
+        sh "mvn compile"
       }
     }
 
     stage('testing') {
       steps {
-        sh 'mvn test'
+        sh "mvn test"
       }
     }
     
     stage('packaging') {
       steps {
-        sh 'mvn package'
+        sh "mvn package"
       }
     }
 
  stage('installing') {
 steps {
-  sh 'mvn install'
+  sh "mvn install"
 }
  }
     stage('site') {
       steps {
-        sh 'mvn site'
+        sh "mvn site"
       }
     }
   }
